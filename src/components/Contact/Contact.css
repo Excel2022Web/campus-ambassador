@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   padding: 3rem;
-  gap: 3.5rem;
+  gap: 3rem;
   justify-content: space-between;
   align-items: center;
+  margin-top: 3rem;
 }
 
 .contact_title {
@@ -216,6 +217,9 @@
 }
 
 @media screen and (max-width: 400px) {
+  .contact {
+    margin-top: 0rem;
+  }
   .contact_title h1 {
     font-size: 2rem;
   }  

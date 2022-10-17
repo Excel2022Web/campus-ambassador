@@ -102,6 +102,9 @@
 }
 
 @media screen and (max-width: 400px) {
+    .faq_section {
+        margin-top: 4rem;
+    }
 
     .question{
         font-size: 0.9rem;  

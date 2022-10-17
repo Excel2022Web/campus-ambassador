@@ -214,6 +214,7 @@
   .rewards {
     padding: 0.5rem;
     gap: 1.5rem;
+    margin-top: 3rem;
   }
 
   .reward_info {
