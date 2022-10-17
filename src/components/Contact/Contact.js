@@ -3,6 +3,7 @@ import lines from './../../assets/heading_lines.svg'
 import line_rt from './../../assets/heading_lines_rt.svg'
 import { MdEmail } from "react-icons/md";
 import { BsLinkedin } from "react-icons/bs";
+import map from './../../assets/map.svg'
 
 import './Contact.css'
 
@@ -88,7 +89,7 @@ function Contact() {
           <p>MODEL ENGINEERING COLLEGE,<br/> THRIKKAKARA,<br/> ERNAKULAM </p>
         </div>
         <div className='location_map'>
-
+          <img src={map} alt=' ' className='loc_map'/>     
         </div>
       </div>
     

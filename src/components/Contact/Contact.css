@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   padding: 3rem;
-  gap: 3rem;
+  gap: 3.5rem;
   justify-content: space-between;
   align-items: center;
   /* height: 95vh; */
@@ -88,13 +88,16 @@
 
 .location {
   display: flex;
-  align-items: center;
+  margin-top: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
   width: 100%;
+  gap: 2rem;
 }
 
 .location_lt {
    display: flex;
-   flex: 0.5;
+   /* flex: 0.5; */
    flex-direction: column;
    justify-content: flex-start;
    font-family: var(--primary-font);
@@ -108,9 +111,14 @@
 }
 
 .location_lt p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 300;
-  line-height: 1.8rem;
+  line-height: 1.9rem;
+}
+
+.loc_map {
+  display: flex;
+  width: 80%;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -153,9 +161,21 @@
     color: #050D18;
     font-size: 0.9rem;
   }
+
+  .location {
+    justify-content: space-between;
+  }
+
+  .loc_map {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 800px) {
+  .location {
+    flex-direction: column;
+    justify-content: center;
+  }
   .contact_title {
     gap: 1rem;
   }
@@ -216,6 +236,10 @@
 
   .contact_lines {
     display: none;
+  }
+
+  .loc_map {
+    width: 100%;
   }
 }
   
