@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding: 80px;
+  scroll-behavior: smooth;
+}
 
 :root {
   --primary-font: 'Montserrat', sans-serif; 
