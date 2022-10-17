@@ -3,6 +3,9 @@ import Slider from "react-slick";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import excel_img from './../../assets/excel_img.svg'
+import slider1 from './../../assets/png/slider1.jpeg'
+import slider2 from './../../assets/png/slider2.jpeg'
+import slider3 from './../../assets/png/slider3.jpg'
 import lines from './../../assets/heading_lines.svg'
 import line_rt from './../../assets/heading_lines_rt.svg'
 
@@ -54,13 +57,13 @@ function About() {
                         <img src={excel_img} alt='' className='slider_img'/>
                     </div>
                     <div>
-                        <img src={excel_img} alt='' className='slider_img'/>
+                        <img src={slider1} alt='' className='slider_img'/>
                     </div>
                     <div>
-                        <img src={excel_img} alt='' className='slider_img'/>
+                        <img src={slider2} alt='' className='slider_img'/>
                     </div>
                     <div>
-                        <img src={excel_img} alt='' className='slider_img'/>
+                        <img src={slider3} alt='' className='slider_img'/>
                     </div>
                     <div>
                         <img src={excel_img} alt='' className='slider_img'/>

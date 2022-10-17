@@ -8,7 +8,6 @@ function HomePage() {
   return (
     <div className='homePage'>
         <Main />
-        {/* <SimpleSlider/> */}
         <About />
         <Rewards />
         <SimpleAccordion/>

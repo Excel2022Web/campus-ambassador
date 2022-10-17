@@ -62,7 +62,7 @@ export default function SimpleAccordion() {
     <div className='faq_section' id='faq'>
         <div className='faq_title'>
           <img src={lines} alt=' ' className='head_lines faq_line'/>             
-          <h1 className='heading'>FREQUENTLY ASKED QUESTIONS</h1>
+          <h1 className='heading'>FREQUENTLY ASKED <span class='blue'>QUESTIONS</span></h1>
           <img src={line_rt} alt=' ' className='head_lines faq_line'/>            
         </div>
         <div className='faq'>

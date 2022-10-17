@@ -109,8 +109,8 @@
   
     .navbar_mob_close {
       position: absolute;
-      top: 3rem;
-      right: 3rem;
+      top: 1.7rem;
+      right: 2rem;
       font-size: 2rem;
       color: white;
     }
@@ -151,17 +151,14 @@
   }
   }
   @media screen and (max-width: 600px) {
-    /* .navbar {
-      padding: 0 1rem;
-    } */
     .navbar__mob {
       padding: 0 5rem;
       position: relative;
     }
     .navbar_mob_close {
       position: absolute;
-      top: 3rem;
-      right: 3rem;
+      top: 1.7rem;
+      right: 2rem;
       font-size: 2rem;
       color: white;
     }

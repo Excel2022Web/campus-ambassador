@@ -2,14 +2,14 @@ import React from 'react'
 import lines from './../../assets/heading_lines.svg'
 import line_rt from './../../assets/heading_lines_rt.svg'
 import { MdEmail } from "react-icons/md";
-import { BsLinkedin } from "react-icons/bs";
+import { FiLinkedin } from "react-icons/fi"
 import map from './../../assets/map.svg'
 
 import './Contact.css'
 
 function Contact() {
   return (
-    <div className='contact'>
+    <div className='contact' id='contact'>
       <div className='contact_title'>
         <img src={lines} alt=' ' className='contact_lines'/>             
         <h1>CONTACT</h1>
@@ -30,7 +30,7 @@ function Contact() {
             </div>
             <div className='contact_circle'>
               <a href="https://www.facebook.com/excelmec" target="_blank" rel="noopener noreferrer">
-                <BsLinkedin
+                <FiLinkedin
                   style={{ border: "none" }}
                   className="contact_icon"
                   />
@@ -52,7 +52,7 @@ function Contact() {
             </div>
             <div className='contact_circle'>
               <a href="https://www.facebook.com/excelmec" target="_blank" rel="noopener noreferrer">
-                <BsLinkedin
+                <FiLinkedin
                   style={{ border: "none" }}
                   className="contact_icon"
                   />
@@ -74,7 +74,7 @@ function Contact() {
             </div>
             <div className='contact_circle'>
               <a href="https://www.facebook.com/excelmec" target="_blank" rel="noopener noreferrer">
-                <BsLinkedin
+                <FiLinkedin
                   style={{ border: "none" }}
                   className="contact_icon"
                   />
