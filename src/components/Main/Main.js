@@ -1,5 +1,6 @@
 import React from 'react'
-import mascot from '../../assets/mascotArtboard.svg';
+// import mascot from '../../assets/mascotArtboard.svg';
+import mascot from './../../assets/wave_data.json'
 import CountUp from 'react-countup';
 
 import './Main.css'
