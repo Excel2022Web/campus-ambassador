@@ -1,16 +1,30 @@
 import React from 'react'
-// import mascot from '../../assets/mascotArtboard.svg';
-import mascot from './../../assets/wave_data.json'
 import CountUp from 'react-countup';
+import Lottie from 'react-lottie';
+
+import mascot_data from '../../assets/json/mascot.json'
 
 import './Main.css'
 
 function Main() {
 
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: mascot_data,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    },
+  };
+
   return (
     <div className='home_sec' id='home'>
       <div className='home'>
-        <img src={mascot} className='mascot' alt=''/>
+        <Lottie
+          options={defaultOptions}
+          height={300}
+          width={300}
+        />
         <div className='home_title'>
           <div className='intro_text'>
             <h1>EXCEL MEC</h1>

@@ -43,9 +43,9 @@ function About() {
     <div className='about' id='about'>
         <div className='about_head'>
             <div className='abt_title'>
-                <img src={lines} alt=' ' className='head_lines'/>             
-                <h1>WHAT IS <span class="blue">  EXCEL</span> ?</h1>
-                <img src={line_rt} alt=' ' className='head_lines'/>            
+                <img src={lines} alt='' className='head_lines'/>             
+                <h1>WHAT IS <span className="blue">  EXCEL</span> ?</h1>
+                <img src={line_rt} alt='' className='head_lines'/>            
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam enim ex, iaculis vel placerat ut, consectetur lacinia risusLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam enim ex, iaculis vel placerat ut, consectetur lacinia risusLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam enim ex, iaculis vel placerat ut, consectetur lacinia risus</p>
         </div>
