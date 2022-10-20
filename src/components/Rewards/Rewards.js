@@ -10,7 +10,7 @@ function Rewards() {
     <div className='rewards' id='rewards'>
       <div className='rewards_head'>
         <img src={lines} alt=' 'className='head_lines'/>             
-        <h1><span class='blue'>REWARDS</span> AND <span class='blue'>PERKS</span></h1>
+        <h1><span className='blue'>REWARDS</span> AND <span className='blue'>PERKS</span></h1>
         <img src={line_rt} alt=' 'className='head_lines'/>            
       </div>
       <div className='rewards_mid'>

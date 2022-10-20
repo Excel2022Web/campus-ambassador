@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import CountUp from 'react-countup';
 import Lottie from 'react-lottie';
 
+import { useScreenWidth } from '../../hooks/useScreenWidth';
 import mascot_data from '../../assets/json/mascot.json'
 
 import './Main.css'
 
 function Main() {
+
+  const [mascotSize, setMascotSize] = useState()
+
+  const size = useScreenWidth()
 
   const defaultOptions = {
     loop: true,
@@ -17,13 +22,23 @@ function Main() {
     },
   };
 
+
+  useEffect(() => {
+    if(size > 400) {
+      setMascotSize(450)
+    } else {
+      setMascotSize(300)
+    }
+  }, [size])
+  
+
   return (
     <div className='home_sec' id='home'>
       <div className='home'>
         <Lottie
           options={defaultOptions}
-          height={300}
-          width={300}
+          height={mascotSize}
+          width={mascotSize}
         />
         <div className='home_title'>
           <div className='intro_text'>
