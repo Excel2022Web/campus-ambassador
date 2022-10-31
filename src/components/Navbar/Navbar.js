@@ -41,6 +41,9 @@ function Navbar() {
           <NavLink to="/#about" className="nav__link">
             ABOUT
           </NavLink>
+          <NavLink to="/#benefits" className="nav__link">
+            BENEFITS
+          </NavLink>
           <NavLink to="/#rewards" className="nav__link">
             REWARDS
           </NavLink>

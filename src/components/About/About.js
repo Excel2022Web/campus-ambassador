@@ -47,7 +47,7 @@ function About() {
                 <h1>WHAT IS <span className="blue">  EXCEL</span> ?</h1>
                 <img src={line_rt} alt='' className='head_lines'/>            
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam enim ex, iaculis vel placerat ut, consectetur lacinia risusLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam enim ex, iaculis vel placerat ut, consectetur lacinia risusLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam enim ex, iaculis vel placerat ut, consectetur lacinia risus</p>
+            <p>In 2001, the students of Govt. Model Engineering College founded Excel, the second-largest techno-managerial festival in the country and the first of its kind in South India. Excel has steadily hosted students from more than 2000 universities and 1000 institutions across the nation as it has grown exponentially over the years.<br/>The 22 successful editions of Excel that have preceded it have a rich legacy, and Excel 2022 promises to be even better.</p>
         </div>
         <div className='gallery_container'>
             <IoIosArrowBack onClick={gotoPrev} className='achSlider__prev'/>
