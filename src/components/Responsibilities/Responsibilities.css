@@ -1,0 +1,18 @@
+.responsibilities {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 3rem;
+    gap: 2rem;
+    margin-top: 3rem; 
+}
+
+.resp_cont h1 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    font-family: var(--primary-font);
+    text-align: center;
+    color: #21F4FE;
+}

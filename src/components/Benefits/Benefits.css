@@ -38,6 +38,7 @@
 .benefits_icon {
     font-size: 1.3rem;
     color: white;
+    flex-shrink: 0;
 }
 
 @media screen and (max-width: 992px) {
@@ -69,6 +70,12 @@
 
     .benefits {
         padding: 2.5rem;
+    }
+
+    .benefits_icon {
+        font-size: 1rem;
+        color: white;
+        flex-shrink: 0;
     }
 }
 
