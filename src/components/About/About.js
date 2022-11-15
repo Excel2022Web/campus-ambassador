@@ -3,9 +3,13 @@ import Slider from "react-slick";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import excel_img from './../../assets/excel_img.svg'
-import slider1 from './../../assets/png/slider1.jpeg'
-import slider2 from './../../assets/png/slider2.jpeg'
-import slider3 from './../../assets/png/slider3.jpg'
+import pic1 from './../../assets/jpeg/pic1.jpeg'
+import pic2 from './../../assets/jpeg/pic2.jpeg'
+import pic5 from './../../assets/jpeg/pic5.jpeg'
+import pic6 from './../../assets/jpeg/pic6.jpeg'
+import pic8 from './../../assets/jpeg/pic8.jpeg'
+import pic9 from './../../assets/jpeg/pic9.jpeg'
+import pic12 from './../../assets/jpeg/pic12.jpeg'
 import lines from './../../assets/heading_lines.svg'
 import line_rt from './../../assets/heading_lines_rt.svg'
 
@@ -54,22 +58,28 @@ function About() {
             <div className='about_slider'>
                 <Slider {...settings} ref={sliderRef}>
                     <div>
-                        <img src={excel_img} alt='' className='slider_img'/>
-                    </div>
-                    <div>
-                        <img src={slider1} alt='' className='slider_img'/>
-                    </div>
-                    <div>
-                        <img src={slider2} alt='' className='slider_img'/>
-                    </div>
-                    <div>
-                        <img src={slider3} alt='' className='slider_img'/>
+                        <img src={pic8} alt='' className='slider_img'/>
                     </div>
                     <div>
                         <img src={excel_img} alt='' className='slider_img'/>
                     </div>
                     <div>
-                        <img src={excel_img} alt='' className='slider_img'/>
+                        <img src={pic1} alt='' className='slider_img'/>
+                    </div>
+                    <div>
+                        <img src={pic2} alt='' className='slider_img'/>
+                    </div>
+                    <div>
+                        <img src={pic5} alt='' className='slider_img'/>
+                    </div>
+                    <div>
+                        <img src={pic6} alt='' className='slider_img'/>
+                    </div>
+                    <div>
+                        <img src={pic9} alt='' className='slider_img'/>
+                    </div>
+                    <div>
+                        <img src={pic12} alt='' className='slider_img'/>
                     </div>
                 </Slider>
             </div>
