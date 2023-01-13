@@ -24,11 +24,16 @@ function Main() {
 
 
   useEffect(() => {
-    if(size > 400) {
-      setMascotSize(450)
-    } else {
+    if(size > 600) {
+      setMascotSize(400)
+    } else if(size > 500) {
+      setMascotSize(350)
+    } else if(size > 400) {
       setMascotSize(300)
+    } else {
+      setMascotSize(200)
     }
+    
   }, [size])
   
 

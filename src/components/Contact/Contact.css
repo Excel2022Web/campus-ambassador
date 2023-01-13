@@ -34,6 +34,7 @@
   justify-content: space-evenly;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .contact_info {
@@ -48,6 +49,7 @@
   font-family: var(--primary-font);
   color: #FFFFFF;
   gap: 0.7rem;
+  width: 280px;
 }
 
 .contact_info h1 {
@@ -196,6 +198,10 @@
     margin-top: 1rem;
   }
 
+  .contact_lines {
+    display: none;
+  }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -238,9 +244,6 @@
     text-align: center;
   }
 
-  .contact_lines {
-    display: none;
-  }
 
   .loc_map {
     width: 100%;

@@ -21,7 +21,7 @@ function Responsibilities() {
                 <VscDebugBreakpointLog className='benefits_icon'/><p className='benefits_para'>Connect your classmates and friends with the innovative and lit events that Excel conducts.</p>
             </div>
             <div className='benefits_point'>
-                <VscDebugBreakpointLog className='benefits_icon'/><p> Promote the posters and links shared to you in your college and provide sufficient publicity.</p>
+                <VscDebugBreakpointLog className='benefits_icon'/><p className='benefits_para'> Promote the posters and links shared to you in your college and provide sufficient publicity.</p>
             </div>
             <div className='benefits_point'>
                 <VscDebugBreakpointLog className='benefits_icon'/><p className='benefits_para'>Encourage students of your college to participate in Excel and join one of the most reputed tech fests around!</p>
