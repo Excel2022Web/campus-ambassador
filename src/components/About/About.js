@@ -2,14 +2,17 @@ import React, { useRef, useState } from 'react'
 import Slider from "react-slick";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-import excel_img from './../../assets/excel_img.svg'
-import pic1 from './../../assets/jpeg/pic1.jpeg'
+import pic1 from './../../assets/jpeg/pic1.jpg'
 import pic2 from './../../assets/jpeg/pic2.jpeg'
+import pic3 from './../../assets/jpeg/pic3.jpeg'
+import pic4 from './../../assets/jpeg/pic4.jpeg'
 import pic5 from './../../assets/jpeg/pic5.jpeg'
 import pic6 from './../../assets/jpeg/pic6.jpeg'
-import pic8 from './../../assets/jpeg/pic8.jpeg'
+import pic7 from './../../assets/jpeg/pic7.jpg'
 import pic9 from './../../assets/jpeg/pic9.jpeg'
-import pic12 from './../../assets/jpeg/pic12.jpeg'
+import pic10 from './../../assets/jpeg/pic10.jpeg'
+import pic11 from './../../assets/jpeg/pic11.jpeg'
+import pic12 from './../../assets/jpeg/pic12.jpg'
 import lines from './../../assets/heading_lines.svg'
 import line_rt from './../../assets/heading_lines_rt.svg'
 
@@ -58,16 +61,16 @@ function About() {
             <div className='about_slider'>
                 <Slider {...settings} ref={sliderRef}>
                     <div>
-                        <img src={pic8} alt='' className='slider_img'/>
-                    </div>
-                    <div>
-                        <img src={excel_img} alt='' className='slider_img'/>
-                    </div>
-                    <div>
                         <img src={pic1} alt='' className='slider_img'/>
                     </div>
                     <div>
                         <img src={pic2} alt='' className='slider_img'/>
+                    </div>
+                    <div>
+                        <img src={pic3} alt='' className='slider_img'/>
+                    </div>
+                    <div>
+                        <img src={pic4} alt='' className='slider_img'/>
                     </div>
                     <div>
                         <img src={pic5} alt='' className='slider_img'/>
@@ -76,7 +79,16 @@ function About() {
                         <img src={pic6} alt='' className='slider_img'/>
                     </div>
                     <div>
+                        <img src={pic7} alt='' className='slider_img'/>
+                    </div>
+                    <div>
                         <img src={pic9} alt='' className='slider_img'/>
+                    </div>
+                    <div>
+                        <img src={pic10} alt='' className='slider_img'/>
+                    </div>
+                    <div>
+                        <img src={pic11} alt='' className='slider_img'/>
                     </div>
                     <div>
                         <img src={pic12} alt='' className='slider_img'/>
