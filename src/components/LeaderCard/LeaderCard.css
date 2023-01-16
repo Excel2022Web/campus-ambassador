@@ -1,0 +1,82 @@
+.leaderboard-card {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary);
+  border: 1px solid #21F4FE;
+  border-radius: 1rem;
+  margin: 0 auto 1.2rem;
+  font-family: var(--primary-font);;
+  color: #21F4FE;
+  padding: 1rem;
+  position: relative;
+}
+
+.leaderboard-card > * {
+  margin-left: 1.7rem;
+}
+
+.leaderboard-card > img {
+  height: 46px;
+  width: 46px;
+  border-radius: 100%;
+}
+
+.name-score > h3 {
+  margin-right: 1rem;
+  font-size: 1.62rem;
+}
+
+.name-score {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 800px) {
+  .leaderboard-card > * {
+    margin-left: 1.4rem;
+  }
+  .leaderboard-card {
+    padding: 0.8rem;
+  }
+  .name-score {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-left: 1rem !important;
+  }
+
+  .name-score > h2 {
+    font-size: 1.22rem;
+  }
+  .name-score > h3 {
+    line-height: 1.2;
+  }
+}
+
+li.leaderboard-card > h1 {
+  width: 37px !important;
+  /* margin-left: 0rem; */
+  display: flex;
+  flex-shrink: 0;
+  /* text-align: center; */
+  font-size: 1.6rem;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .leaderboard-card > * {
+    margin-left: 0.7rem;
+  }
+  .leaderboard-card {
+    padding: 0.8rem;
+  }
+  .leaderboard-card > img {
+    height: 37px;
+    width: 37px;
+  }
+}

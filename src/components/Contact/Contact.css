@@ -25,6 +25,7 @@
 
 .contact_lines {
   width: 25%;
+  pointer-events: none;
 }
 
 .contact_list {

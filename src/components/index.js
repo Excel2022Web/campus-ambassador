@@ -7,3 +7,5 @@ export { default as Contact } from './Contact/Contact'
 export { default as About } from './About/About'
 export { default as Benefits } from './Benefits/Benefits'
 export { default as Responsibilities } from './Responsibilities/Responsibilities'
+
+export { default as LeaderCard } from './LeaderCard/LeaderCard'

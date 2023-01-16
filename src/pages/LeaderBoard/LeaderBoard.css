@@ -1,0 +1,33 @@
+.leaderBoard {
+    background: linear-gradient(180deg, #050D18 82.03%, #001C3D 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px;
+}
+
+.leaderBoard__component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 800px) {
+    .leaderBoard__component {
+        width: 100%;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .leaderBoard__component {
+        width: 100%;
+        padding: 1rem;
+    }
+}

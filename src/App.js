@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import { Navbar, Loader } from "./components";
-import { HomePage } from './pages'
+import { HomePage, LeaderBoard } from './pages'
 
 import './App.css';
 
@@ -13,6 +13,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/leaderboard" element={<LeaderBoard />} />
             
             <Route path="*" element={<Navigate replace to="/" />} />
           </Routes>
