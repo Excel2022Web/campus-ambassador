@@ -47,10 +47,9 @@ function Main() {
         />
         <div className='home_title'>
           <div className='intro_text'>
-            <h1>EXCEL MEC</h1>
             <h2>CAMPUS AMBASSADOR</h2>
           </div>
-          <button className='reg_btn' >REGISTER</button>
+          <button className='reg_btn'>REGISTER</button>
         </div>
       </div>
       <div className='features'>
@@ -61,6 +60,7 @@ function Main() {
             <div className='features_cont'>
               <h4>WORKSHOPS </h4>
             </div>
+            <div className="feature_foot" />
           </div>
 
           <div className='home_highlights'>
@@ -70,6 +70,7 @@ function Main() {
             <div className='features_cont'>
               <h4>LECTURES </h4>
             </div>
+            <div className="feature_foot" />
 
           </div>
           <div className='home_highlights'>
@@ -79,6 +80,7 @@ function Main() {
             <div className='features_cont'>
               <h4>SPONSORS </h4>
             </div>
+            <div className="feature_foot" />
           </div>
       </div>
     </div>
