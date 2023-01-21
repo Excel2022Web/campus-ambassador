@@ -25,7 +25,7 @@ function Main() {
 
   useEffect(() => {
     if(size > 600) {
-      setMascotSize(400)
+      setMascotSize(350)
     } else if(size > 500) {
       setMascotSize(350)
     } else if(size > 400) {
@@ -44,14 +44,24 @@ function Main() {
           options={defaultOptions}
           height={mascotSize}
           width={mascotSize}
+          style={{margin: 0}}
         />
         <div className='home_title'>
-          <div className='intro_text'>
-            <h2>CAMPUS AMBASSADOR</h2>
+          <div className="holo-container">
+            <div className="holo holo-1">
+              <div className="text t-left">Campus</div>
+              <div className="text t-right">Campus</div>
+              <div className="text">Campus</div>
+            </div>
+            <div className="holo holo-2">
+              <div className="text t-left">Ambassador</div>
+              <div className="text t-right">Ambassador</div>
+              <div className="text">Ambassador</div>
+            </div>
           </div>
-          <button className='reg_btn'>REGISTER</button>
         </div>
       </div>
+      <button className='reg_btn'>REGISTER</button>
       <div className='features'>
           <div className='home_highlights'>
             <div className='count_circle'>
