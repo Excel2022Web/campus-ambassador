@@ -6,7 +6,7 @@ import { contactsData } from '../../data/contactData';
 
 import lines from './../../assets/heading_lines.svg'
 import line_rt from './../../assets/heading_lines_rt.svg'
-import map from './../../assets/map.png'
+// import map from './../../assets/map.png'
 
 import './Contact.css'
 
@@ -44,7 +44,7 @@ function Contact() {
           </div>
         ))}
       </div>
-      <div className='location'>
+      {/* <div className='location'>
         <div className='location_lt'>
           <h1>LOCATION</h1>
           <p>MODEL ENGINEERING COLLEGE,<br/> THRIKKAKARA,<br/> ERNAKULAM </p>
@@ -55,7 +55,7 @@ function Contact() {
           </a>               
             
         </div>
-      </div>
+      </div> */}
     
     </div>
   )

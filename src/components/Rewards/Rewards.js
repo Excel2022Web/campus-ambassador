@@ -3,6 +3,8 @@ import { VscDebugBreakpointLog } from "react-icons/vsc";
 
 import lines from './../../assets/heading_lines.svg'
 import line_rt from './../../assets/heading_lines_rt.svg'
+import sqr1 from './../../assets/sqr1.svg'
+import sqr2 from './../../assets/sqr2.svg'
 import './Rewards.css'
 
 
@@ -50,17 +52,17 @@ function Rewards() {
           </div>
           <div className='benefits_point'>
             <VscDebugBreakpointLog className='benefits_icon'/>
-            <p className='benefits_para'>Discounted ticket prices and free entry to selected excel events.</p>
+            <p className='benefits_para'>Get discount ticket prices and free entry to selected Excel events.</p>
           </div>
           <div className='benefits_point'>
             <VscDebugBreakpointLog className='benefits_icon'/>
             <p className='benefits_para'>Certificate and activity points will be awarded on completing minimum criteria.</p>
           </div>
         <p>
-          
-          
         </p>
       </div>
+      <img src={sqr1} alt="" className='r_sqr1' />
+      <img src={sqr2} alt="" className='r_sqr2' />
     </div>
   )
 }

@@ -5,7 +5,8 @@ import { NavHashLink as NavLink } from "react-router-hash-link"
 import { useScrollPosition } from "../../hooks/useScrollPosition"
 
 import "./Navbar.css"
-import logo from '../../assets/png/excel_logo_png.png';
+// import logo from '../../assets/png/excel_logo_png.png';
+import excel_logo from "../../assets/excellogowithtext.svg"
 
 function Navbar() {
   const [drawer, setDrawer] = useState(false)
@@ -31,7 +32,7 @@ function Navbar() {
       <div className="navbar__main container">
         <div className="nav_logo">
         <NavLink to="/#">
-          <img src={logo} alt="" />
+          <img src={excel_logo} alt="" />
           </NavLink>
         </div>
         <div className="nav_contents">

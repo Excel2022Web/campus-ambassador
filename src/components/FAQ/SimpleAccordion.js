@@ -42,7 +42,7 @@ const Faqs = [
   },
   {
      id: 6,
-     panel: "label5",
+     panel: "label6",
      title: "Can there be more than one CA from a college?",
      desc: "Yes, but the points are given for separate registrations from individuals.",
   },

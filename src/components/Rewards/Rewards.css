@@ -5,7 +5,24 @@
   align-items: center;
   padding: 3rem;
   gap: 3rem;
-  /* margin-top: 3rem; */
+  position: relative;
+}
+
+.r_sqr1, .r_sqr2 {
+  position: absolute;
+  pointer-events: none;
+}
+
+.r_sqr1 {
+  left: 5%;
+  bottom: 2%;
+  transform: rotate(15deg);
+}
+
+.r_sqr2 {
+  right: 3%;
+  bottom: 35%;
+  transform: rotate(45deg);
 }
 
 .rewards_head {
@@ -175,6 +192,9 @@
 }
 
 @media screen and (max-width: 800px) {
+  .r_sqr1, .r_sqr2 {
+    display: none;
+  }
   .reward_circle {
     width: 100px;
     height: 100px;

@@ -3,6 +3,8 @@ import { VscDebugBreakpointLog } from "react-icons/vsc";
 
 import lines from './../../assets/heading_lines.svg'
 import line_rt from './../../assets/heading_lines_rt.svg'
+import sqr1 from './../../assets/sqr1.svg'
+import sqr2 from './../../assets/sqr2.svg'
 
 import './Benefits.css'
 
@@ -28,9 +30,11 @@ function Benefits() {
                 <VscDebugBreakpointLog className='benefits_icon'/><p className='benefits_para'>Add Excel Campus Ambassador as a valuable experience to your resume!</p>
             </div>
             <div className='benefits_point'>
-                <VscDebugBreakpointLog className='benefits_icon'/><p className='benefits_para'>Discount ticket prices and free entry to selected excel event's.</p>
+                <VscDebugBreakpointLog className='benefits_icon'/><p className='benefits_para'>Get discount ticket prices and free entry to selected Excel events.</p>
             </div>
         </div>
+        <img src={sqr1} alt="" className='b_sqr1' />
+        <img src={sqr2} alt="" className='b_sqr2' />
     </div>
   )
 }

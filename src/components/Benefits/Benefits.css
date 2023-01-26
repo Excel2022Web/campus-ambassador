@@ -7,8 +7,23 @@
     padding: 3rem;
     gap: 2rem;
     margin-top: 3rem;
+    position: relative;
 }
 
+.b_sqr1, .b_sqr2 {
+    position: absolute;
+    pointer-events: none;
+}
+
+.b_sqr1 {
+    left: 5%;
+}
+
+.b_sqr2 {
+    right: 3%;
+    top: 5%;
+    transform: rotate(30deg);
+}
 
 .benefits_content {
     margin-top: 2rem;
@@ -48,6 +63,9 @@
 }
 
 @media screen and (max-width: 800px) {
+    .b_sqr1, .b_sqr2 {
+        display: none;
+    }
     .benefits_para {
         font-size: 1rem;
     }

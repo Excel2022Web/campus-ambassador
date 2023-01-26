@@ -5,6 +5,7 @@ import { FaHeart } from "react-icons/fa"
 import "./Footer.css"
 import excel_logo from "../../assets/excellogowithtext.svg"
 import mec_logo from "../../assets/mec_logo.svg"
+
 const Footer = () => {
   return (
     <div id="footer">
