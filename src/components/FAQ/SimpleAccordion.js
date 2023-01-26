@@ -14,37 +14,37 @@ const Faqs = [
      id: 1,
      panel: "label1",
      title: "What is a Campus Ambassador?",
-     desc: "Absolutely not, it is free for everyone. The only thing you are required to have is a mind to have  fun, learn new things, and a passion to create new things!",
+     desc: "Being a Campus Ambassador is becoming the face of the tech fest on your campus. This requires you to network with your peers and share the contents of Excel and encourage them to participate.",
   },
   {
      id: 2,
      panel: "label2",
      title: "Who can apply?",
-     desc: "Our events are beginner friendly and hence are open to both beginners and experts alike. Whether you are someone who is absolutely clueless about the world of DeFi and wants to dive right in or whether you are someone who wants to prove their mettle, we encourage all sorts of entries!",
+     desc: "Anyone who is currently in college has great networking skills and communication and can apply.",
   },
   {
      id: 3,
      panel: "label3",
      title: "How to Apply for Campus Ambassador?",
-     desc: "We don’t accept individual entries, and it is mandatory to have a team with a minimum of 2 and a maximum of 5 members. Learning new things is so much more fun, if you have a group of people to learn it with!",
+     desc: "Check out the Excel CA web page for more information.",
   },
   {
      id: 4,
      panel: "label4",
      title: "Is there an entry fee to participate?",
-     desc: "Our events are beginner friendly and hence are open to both beginners and experts alike. Whether you are someone who is absolutely clueless about the world of DeFi and wants to dive right in or whether you are someone who wants to prove their mettle, we encourage all sorts of entries!",
+     desc: "No, being an Excel Campus Ambassador is free but there would be a certain fee for the events in EXCEL.",
   },
   {
      id: 5,
      panel: "label5",
      title: "Under which circumstance will I be removed from the CAA Program?",
-     desc: "We don’t accept individual entries, and it is mandatory to have a team with a minimum of 2 and a maximum of 5 members. Learning new things is so much more fun, if you have a group of people to learn it with!",
+     desc: "A CA would not be removed until any sort of malpractice is detected. But for a CA to enter the leaderboard and avail prizes, they will have to complete certain tasks and bring about a number of registrations set by us.",
   },
   {
      id: 6,
      panel: "label5",
      title: "Can there be more than one CA from a college?",
-     desc: "We don’t accept individual entries, and it is mandatory to have a team with a minimum of 2 and a maximum of 5 members. Learning new things is so much more fun, if you have a group of people to learn it with!",
+     desc: "Yes, but the points are given for separate registrations from individuals.",
   },
 
 ];

@@ -16,3 +16,9 @@
     text-align: center;
     color: #21F4FE;
 }
+
+@media screen and (max-width: 600px)  {
+    .responsibilities {
+        padding: 0 2.5rem;
+    }
+}
