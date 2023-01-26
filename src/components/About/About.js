@@ -51,7 +51,7 @@ function About() {
         <div className='about_head'>
             <div className='abt_title'>
                 <img src={lines} alt='' className='head_lines'/>             
-                <h1>WHAT IS <span className="blue">  EXCEL</span> ?</h1>
+                <h1>WHAT IS <span className="blue">  EXCEL</span>?</h1>
                 <img src={line_rt} alt='' className='head_lines'/>            
             </div>
             <p>

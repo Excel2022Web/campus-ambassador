@@ -6,7 +6,7 @@ import { contactsData } from '../../data/contactData';
 
 import lines from './../../assets/heading_lines.svg'
 import line_rt from './../../assets/heading_lines_rt.svg'
-import map from './../../assets/map.svg'
+import map from './../../assets/map.png'
 
 import './Contact.css'
 
@@ -50,7 +50,10 @@ function Contact() {
           <p>MODEL ENGINEERING COLLEGE,<br/> THRIKKAKARA,<br/> ERNAKULAM </p>
         </div>
         <div className='location_map'>
-          <img src={map} alt=' ' className='loc_map'/>     
+          <a href="https://goo.gl/maps/KPUzErGX34DnKcDL9" target="_blank" rel="noopener noreferrer">
+            <img src={map} alt=' ' className='loc_map'/> 
+          </a>               
+            
         </div>
       </div>
     

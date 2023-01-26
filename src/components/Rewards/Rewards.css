@@ -147,12 +147,13 @@
   .rewards_cont p { 
     font-size: 0.9rem;
   }
+  
 }
 
 
 @media screen and (max-width: 992px) {
   .rewards {
-    padding: 1rem;
+    padding: 1rem 3rem;
     margin-top: 2rem;
   }
   .rewards_head {
@@ -203,7 +204,7 @@
     padding: 0 2.5rem;
   }
   .rewards_head h1 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     text-align: center;
   }
 

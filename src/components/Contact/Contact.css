@@ -101,7 +101,7 @@
 
 .location_lt {
    display: flex;
-   /* flex: 0.5; */
+   flex: 0.5;
    flex-direction: column;
    justify-content: flex-start;
    font-family: var(--primary-font);
@@ -120,9 +120,13 @@
   line-height: 1.9rem;
 }
 
-.loc_map {
+.location_map {
   display: flex;
-  width: 80%;
+  flex: 0.5;
+}
+
+.loc_map {
+  width: 300px;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -139,6 +143,16 @@
   .contact_list {
     width: 100%;
   }
+  .contact_title {
+    gap: 1.5rem;
+  }
+  .contact_title h1 {
+    font-size: 2.25rem;
+  }
+  .contact_lines {
+    width: 20%;
+    pointer-events: none;
+}
 }
 
 @media screen and (max-width: 992px) {
@@ -170,8 +184,10 @@
     justify-content: space-between;
   }
 
-  .loc_map {
+  .location_map {
     width: 90%;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -179,6 +195,7 @@
   .location {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
   .contact_title {
     gap: 1rem;
@@ -207,11 +224,11 @@
 
 @media screen and (max-width: 600px) {
   .contact_title h1 {
-    font-size: 2.3rem;
+    font-size: 1.8rem;
   }  
 
   .location_lt h1{
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
   
   .location_lt p {
@@ -221,15 +238,15 @@
   .contact_list {
     flex-direction: column;
   }
+  .loc_map {
+    width: 250px;
+}
 }
 
 @media screen and (max-width: 400px) {
   .contact {
     margin-top: 0rem;
   }
-  .contact_title h1 {
-    font-size: 2rem;
-  }  
 
   .location_lt h1{
     font-size: 1.7rem;
@@ -246,7 +263,7 @@
   }
 
 
-  .loc_map {
+  .location_map {
     width: 100%;
   }
 }
