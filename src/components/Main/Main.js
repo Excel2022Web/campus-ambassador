@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import CountUp from 'react-countup';
 import Lottie from 'react-lottie';
-
 import { useScreenWidth } from '../../hooks/useScreenWidth';
 import mascot_data from '../../assets/json/mascot.json'
-
 import './Main.css'
-
+import AccountHandler from '../../auth/accountHandler';
 function Main() {
 
   const [mascotSize, setMascotSize] = useState()
-
   const size = useScreenWidth()
 
   const defaultOptions = {
@@ -35,8 +32,32 @@ function Main() {
     }
     
   }, [size])
-  
+    
 
+  // useEffect(() => {
+  //   if(AccountHandler.isUserLoggedIn()){
+  //     axios.get(`${accountBackendUrl}/profile`, {
+  //       headers: { Authorization: `Bearer ${window.localStorage.getItem("accessToken")}` },
+  //   }).then((response)=>{
+  //     // console.log("Navpro:",response)
+  //     setProfile(response.data)
+  //   },error=>{
+  //     console.log(error)
+  //   })
+  //   }
+  // }, [])
+  
+    const onLoginClick=()=>{
+      if (!AccountHandler.isUserLoggedIn()) {
+        AccountHandler.logInUser();
+    }
+    
+    }
+    
+    const onLogoutClick=()=>{
+      AccountHandler.logOutUser();
+    }
+    
   return (
     <div className='home_sec' id='home'>
       <div className='home'>
@@ -61,7 +82,9 @@ function Main() {
           </div>
         </div>
       </div>
-      <button className='reg_btn'>REGISTER</button>
+      <button className='reg_btn' onClick={onLoginClick}>REGISTER</button>
+      <button onClick={onLogoutClick}>Log Out</button>
+      {/* <button onClick={catCaProfile}>Show user profile</button> */}
       <div className='features'>
           <div className='home_highlights'>
             <div className='count_circle'>
