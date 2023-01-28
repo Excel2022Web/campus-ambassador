@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 import CountUp from 'react-countup';
 import Lottie from 'react-lottie';
 import { useScreenWidth } from '../../hooks/useScreenWidth';
@@ -9,6 +10,8 @@ function Main() {
 
   const [mascotSize, setMascotSize] = useState()
   const size = useScreenWidth()
+
+  const navigate = useNavigate()
 
   const defaultOptions = {
     loop: true,
@@ -50,10 +53,14 @@ function Main() {
     const onLoginClick=()=>{
       if (!AccountHandler.isUserLoggedIn()) {
         AccountHandler.logInUser();
-    }
+      } 
+      else {
+        navigate('/leaderboard')
+      }
     
     }
     
+    // eslint-disable-next-line
     const onLogoutClick=()=>{
       AccountHandler.logOutUser();
     }
@@ -68,7 +75,7 @@ function Main() {
           style={{margin: 0}}
         />
         <div className='home_title'>
-          <div className="holo-container">
+          <div className="holo-container" data-aos="zoom-in">
             <div className="holo holo-1">
               <div className="text t-left">Campus</div>
               <div className="text t-right">Campus</div>
@@ -83,35 +90,35 @@ function Main() {
         </div>
       </div>
       <button className='reg_btn' onClick={onLoginClick}>REGISTER</button>
-      <button onClick={onLogoutClick}>Log Out</button>
+      {/* <button onClick={onLogoutClick}>Log Out</button> */}
       {/* <button onClick={catCaProfile}>Show user profile</button> */}
       <div className='features'>
-          <div className='home_highlights'>
+          <div className='home_highlights' data-aos="fade-up">
             <div className='count_circle'>
-              <h3><CountUp end={10} duration={2} enableScrollSpy={true} preserveValue={true}/>+</h3>
+              <h3><CountUp end={8} duration={2} enableScrollSpy={true} preserveValue={true}/>K+</h3>
             </div>
             <div className='features_cont'>
-              <h4>WORKSHOPS </h4>
+              <h4>FOOTFALL </h4>
             </div>
             <div className="feature_foot" />
           </div>
 
-          <div className='home_highlights'>
+          <div className='home_highlights' data-aos="fade-up">
             <div className='count_circle'>
-              <h3><CountUp end={5} duration={2} enableScrollSpy={true} preserveValue={true}/>+</h3>
+              <h3><CountUp end={40} duration={2} enableScrollSpy={true} preserveValue={true}/>+</h3>
             </div>
             <div className='features_cont'>
-              <h4>LECTURES </h4>
+              <h4>EVENTS </h4>
             </div>
             <div className="feature_foot" />
 
           </div>
-          <div className='home_highlights'>
+          <div className='home_highlights' data-aos="fade-up">
             <div className='count_circle'>
-              <h3><CountUp end={20} duration={2} enableScrollSpy={true} preserveValue={true}/>+</h3>
+              <h3><CountUp end={20} duration={2} enableScrollSpy={true} preserveValue={true}/>K</h3>
             </div>
             <div className='features_cont'>
-              <h4>SPONSORS </h4>
+              <h4>PIZE POOL </h4>
             </div>
             <div className="feature_foot" />
           </div>

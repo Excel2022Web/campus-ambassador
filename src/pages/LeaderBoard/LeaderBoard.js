@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { LeaderCard } from '../../components'
+// import { LeaderCard } from '../../components'
 import './LeaderBoard.css'
 
 import lines from './../../assets/heading_lines.svg'
@@ -15,11 +15,8 @@ function LeaderBoard() {
             <img src={line_rt} alt=' ' className='contact_lines'/>            
         </div>
         <div className='leaderBoard__component'>
-            <LeaderCard rank={1} name="Hemanth R" score={100} skeleton={false}/>
-            <LeaderCard rank={1} name="Hemanth R" score={100} skeleton={false}/>
-            <LeaderCard rank={1} name="Hemanth R" score={100} skeleton={false}/>
-            <LeaderCard rank={1} name="Hemanth R" score={100} skeleton={false}/>
-            <LeaderCard rank={1} name="Hemanth R" score={100} skeleton={false}/>
+            {/* <LeaderCard rank={1} name="Hemanth R" score={100} skeleton={false}/> */}
+            <h3>Coming Soon...</h3>
         </div>
     </div>
   )

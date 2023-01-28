@@ -1,4 +1,5 @@
-import React, { Suspense,useEffect } from 'react'
+import React, { Suspense, useEffect } from 'react'
+import AOS from 'aos';
 import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import { Navbar, Loader } from "./components";
 import { HomePage, LeaderBoard } from './pages'
@@ -6,6 +7,13 @@ import AuthHandler from './auth/authHandler';
 import './App.css';
 
 function App() {
+  
+  useEffect(() => {
+    AOS.init({
+      duration: 900,
+    });
+  }, [])
+
   useEffect(() => {
     let index = window.location.href.indexOf("?");
     const searchString = window.location.href.slice(index);

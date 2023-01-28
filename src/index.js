@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import 'aos/dist/aos.css';
 import App from './App';
 
 ReactDOM.render(
