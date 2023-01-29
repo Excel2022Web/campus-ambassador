@@ -115,10 +115,10 @@ function Main() {
           </div>
           <div className='home_highlights' data-aos="fade-up">
             <div className='count_circle'>
-              <h3><CountUp end={20} duration={2} enableScrollSpy={true} preserveValue={true}/>K</h3>
+              <h3><CountUp end={4} duration={2} enableScrollSpy={true} preserveValue={true}/>L+</h3>
             </div>
             <div className='features_cont'>
-              <h4>PIZE POOL </h4>
+              <h4>PRIZE POOL </h4>
             </div>
             <div className="feature_foot" />
           </div>
