@@ -78,8 +78,6 @@ function Main() {
       </div>
       {(window.localStorage.getItem("accessToken")?<div><button className='reg_btn' onClick={onLoginClick}>LEADERBOARD</button><button onClick={onLogoutClick}>Log Out</button></div>:<button className='reg_btn' onClick={onLoginClick}>REGISTER</button>)}
       
-      
-      {/* <button onClick={catCaProfile}>Show user profile</button> */}
       <div className='features'>
           <div className='home_highlights' data-aos="fade-up">
             <div className='count_circle'>

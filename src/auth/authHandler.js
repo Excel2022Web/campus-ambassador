@@ -47,20 +47,18 @@ export default class AuthHandler {
         return res;
     };
 
-    static setAccessToken = async (token) => {
+    static setAccessToken = (token) => {
         if (token != null) {
             let date = new Date();
             date.setTime(date.getTime() + 780000);
             window.localStorage.setItem("accessToken",token)
-            await axios.post(`${caBaseUrl}/ambassador`,{
-                headers: {
-                  Authorization: `Bearer ${token}}`,
-                },
-              }).then((response)=>{
+            axios.post(`${caBaseUrl}/ambassador`,{
+                access_token: token
+            }).then((response)=>{
                 console.log(response)
-              },(error)=>{
+            },error=>{
                 console.log(error)
-              })
+            })
         }
     };
 
