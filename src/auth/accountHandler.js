@@ -4,8 +4,10 @@ import { accountBackendUrl, authBaseURL } from "../utils/urls";
 
 export default class AccountHandler {
     static logInUser = () => {
-        if (!this.isUserLoggedIn()) window.location.href = `${authBaseURL}/auth/login?redirect_to=` + window.location;
-        window.location.href('/leaderboard')
+        if (!this.isUserLoggedIn()){
+            window.location.href = `${authBaseURL}/auth/login?redirect_to=` + window.location;
+        } 
+        
     };
 
     static logOutUser = () => {
