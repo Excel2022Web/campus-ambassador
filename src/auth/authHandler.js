@@ -27,17 +27,17 @@ export default class AuthHandler {
         return "";
     };
 
-    // static aysncGetAccessToken = async () => {
-    //     const cookie = this.getCookie("access_token");
+    static aysncGetAccessToken = async () => {
+        const cookie = this.getCookie("access_token");
 
-    //     if (cookie != null && cookie !== "") return cookie;
+        if (cookie != null && cookie !== "") return cookie;
 
-    //     // Access token is null so try to fetch access token
-    //     let access_token = await this.asyncFetchAcessToken();
+        // Access token is null so try to fetch access token
+        let access_token = await this.asyncFetchAcessToken();
 
-    //     // Access token may or may not be null depending on whether access token exists
-    //     return access_token;
-    // };
+        // Access token may or may not be null depending on whether access token exists
+        return access_token;
+    };
 
     static asyncSetRefreshToken = async (token) => {
         window.localStorage.setItem("refreshToken", JSON.stringify(token));
@@ -56,18 +56,23 @@ export default class AuthHandler {
         }
     };
 
-    static aysncGetAccessToken = async (refreshToken) => {
-        
-        if (refreshToken!= null) {
-            axios.post(`${accountBackendUrl}/auth/refresh`, {
-                refreshToken: refreshToken,
-            }).then((response)=>{
-                console.log("Acces: ",response)
-                window.localStorage.setItem("accessToken",response.data.accessToken)
-            },error=>{
-                console.log(error)
-            })
+    static asyncFetchAcessToken = async () => {
+        let access_token = null;
+        const refresh_token = this.getRefreshToken();
+        if (refresh_token != null) {
+            try {
+                let res = await axios.post(`${accountBackendUrl}/auth/refresh`, {
+                    refreshToken: refresh_token,
+                });
+                if (res.status === 200 && res.data.accessToken !== null && res.data.accessToken.length !== 0) access_token = res.data.accessToken;
+                // console.log("acccess: ",access_token)
+                this.setAccessToken(access_token)
+            } catch (err) {
+                console.log("Failed to fetch access token");
+            }
         }
 
+        this.setAccessToken(access_token);
+        return access_token;
     };
 }
