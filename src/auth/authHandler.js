@@ -1,6 +1,5 @@
 import axios from "axios";
 import { accountBackendUrl } from "../utils/urls";
-import { ambassadorReg } from "../api/ambassadorReg/ambassadorReg";
 import { caBaseUrl } from "../utils/urls";
 export default class AuthHandler {
     static clearAllTokens = () => {

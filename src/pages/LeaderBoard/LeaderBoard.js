@@ -1,22 +1,21 @@
-import React, { useEffect, useState } from 'react'
-
-import { LeaderCard } from '../../components'
+import React, { } from 'react'
+// import { LeaderCard } from '../../components'
 import './LeaderBoard.css'
-import axios from 'axios'
-import { caBaseUrl } from '../../utils/urls'
+// import axios from 'axios'
+// import { caBaseUrl } from '../../utils/urls'
 import lines from './../../assets/heading_lines.svg'
 import line_rt from './../../assets/heading_lines_rt.svg'
 function LeaderBoard() {
-  const[leaders,setLeaders]=useState([])
-  useEffect(()=>{
-    axios.get(`${caBaseUrl}/ambassadorLeaderboard`).then((response)=>{
-      setLeaders(response.data);
+  // const[leaders,setLeaders]=useState([])
+  // useEffect(()=>{
+  //   axios.get(`${caBaseUrl}/ambassadorLeaderboard`).then((response)=>{
+  //     setLeaders(response.data);
 
-  },(error)=>{
-      console.log(error)
-  })
+  // },(error)=>{
+  //     console.log(error)
+  // })
 
-  },[])
+  // },[])
   return (
     <div className="leaderBoard">
         <div className='contact_title'>
