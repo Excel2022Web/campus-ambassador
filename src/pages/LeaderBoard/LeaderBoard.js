@@ -25,12 +25,12 @@ function LeaderBoard() {
             <img src={line_rt} alt=' ' className='contact_lines'/>            
         </div>
         <div className='leaderBoard__component'>
-          {leaders?.map((leader,index)=>{
+          {/* {leaders?.map((leader,index)=>{
             return(
               <LeaderCard rank={index+1} name={leader.name} score={leader.points} skeleton={false} avatar={leader.image}/>
             )
-          })}
-            
+          })} */}
+             <h3>Coming Soon...</h3>
         </div>
     </div>
   )

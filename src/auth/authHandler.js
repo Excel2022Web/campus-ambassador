@@ -1,5 +1,7 @@
 import axios from "axios";
 import { accountBackendUrl } from "../utils/urls";
+import { ambassadorReg } from "../api/ambassadorReg/ambassadorReg";
+import { caBaseUrl } from "../utils/urls";
 export default class AuthHandler {
     static clearAllTokens = () => {
         window.localStorage.setItem("refreshToken", JSON.stringify(null));
@@ -46,13 +48,20 @@ export default class AuthHandler {
         return res;
     };
 
-    static setAccessToken = (token) => {
+    static setAccessToken = async (token) => {
         if (token != null) {
             let date = new Date();
             date.setTime(date.getTime() + 780000);
-            // let expires = "expires=" + date.toUTCString();
-            // document.cookie = `access_token=${token};${expires};path=/`;
             window.localStorage.setItem("accessToken",token)
+            await axios.post(`${caBaseUrl}/ambassador`,{
+                headers: {
+                  Authorization: `Bearer ${token}}`,
+                },
+              }).then((response)=>{
+                console.log(response)
+              },(error)=>{
+                console.log(error)
+              })
         }
     };
 
@@ -65,8 +74,9 @@ export default class AuthHandler {
                     refreshToken: refresh_token,
                 });
                 if (res.status === 200 && res.data.accessToken !== null && res.data.accessToken.length !== 0) access_token = res.data.accessToken;
-                // console.log("acccess: ",access_token)
+                
                 this.setAccessToken(access_token)
+
             } catch (err) {
                 console.log("Failed to fetch access token");
             }
