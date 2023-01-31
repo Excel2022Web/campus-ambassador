@@ -7,6 +7,7 @@ import mascot_data from '../../assets/json/mascot.json'
 import './Main.css'
 import AccountHandler from '../../auth/accountHandler';
 function Main() {
+ 
 
   const [mascotSize, setMascotSize] = useState()
   const size = useScreenWidth()
@@ -35,20 +36,6 @@ function Main() {
     }
     
   }, [size])
-    
-
-  // useEffect(() => {
-  //   if(AccountHandler.isUserLoggedIn()){
-  //     axios.get(`${accountBackendUrl}/profile`, {
-  //       headers: { Authorization: `Bearer ${window.localStorage.getItem("accessToken")}` },
-  //   }).then((response)=>{
-  //     // console.log("Navpro:",response)
-  //     setProfile(response.data)
-  //   },error=>{
-  //     console.log(error)
-  //   })
-  //   }
-  // }, [])
   
     const onLoginClick=()=>{
       if (!AccountHandler.isUserLoggedIn()) {
@@ -89,9 +76,8 @@ function Main() {
           </div>
         </div>
       </div>
-      <button className='reg_btn' onClick={onLoginClick}>REGISTER</button>
-      {/* <button onClick={onLogoutClick}>Log Out</button> */}
-      {/* <button onClick={catCaProfile}>Show user profile</button> */}
+      {(window.localStorage.getItem("accessToken")?<div><button className='reg_btn' onClick={onLoginClick}>LEADERBOARD</button><button onClick={onLogoutClick}>Log Out</button></div>:<button className='reg_btn' onClick={onLoginClick}>REGISTER</button>)}
+      
       <div className='features'>
           <div className='home_highlights' data-aos="fade-up">
             <div className='count_circle'>
