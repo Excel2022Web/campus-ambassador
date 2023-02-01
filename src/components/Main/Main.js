@@ -8,8 +8,8 @@ import "./Main.css";
 import AccountHandler from "../../auth/accountHandler";
 function Main() {
   const [mascotSize, setMascotSize] = useState();
-  const [phoneNo, setPhoneNo] = useState();
-  const[accessTokenValue,setAccesTokenValue]=useState()
+  const [phoneNo, setPhoneNo] = useState("");
+  const [accessTokenValue, setAccesTokenValue] = useState();
   const size = useScreenWidth();
 
   const navigate = useNavigate();
@@ -22,11 +22,11 @@ function Main() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-  useEffect(()=>{
-    if(window.localStorage.getItem("accessToken")){
-      setAccesTokenValue(window.localStorage.getItem("accessToken"))
+  useEffect(() => {
+    if (window.localStorage.getItem("accessToken")) {
+      setAccesTokenValue(window.localStorage.getItem("accessToken"));
     }
-  },[])
+  }, []);
   useEffect(() => {
     if (size > 600) {
       setMascotSize(350);
