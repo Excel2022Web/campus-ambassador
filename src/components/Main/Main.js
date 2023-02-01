@@ -82,7 +82,7 @@ function Main() {
           <button className="reg_btn" onClick={onLoginClick}>
             LEADERBOARD
           </button>
-          <button onClick={onLogoutClick}>Log Out</button>
+          {/* <button onClick={onLogoutClick}>Log Out</button> */}
         </div>
       ) : (
         <div>
