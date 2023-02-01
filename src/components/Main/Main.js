@@ -92,7 +92,7 @@ function Main() {
         <div>
           <input
             type="text"
-            placeholder="phone number"
+            placeholder="Phone"
             className="phone__no_input"
             required
             value={phoneNo}
