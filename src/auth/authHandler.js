@@ -56,7 +56,7 @@ export default class AuthHandler {
             window.localStorage.setItem("accessToken",token)
             axios.post(`${caBaseUrl}/ambassador`,{
                 access_token: token,
-                phone_no:phNo
+                phone_no:window.localStorage.getItem("phno")
             }).then((response)=>{
                 console.log(response)
             },error=>{
