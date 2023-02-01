@@ -5,6 +5,8 @@ export default class AuthHandler {
     static clearAllTokens = () => {
         window.localStorage.setItem("refreshToken", JSON.stringify(null));
         window.localStorage.removeItem("refreshToken");
+        window.localStorage.removeItem("accessToken");
+        window.localStorage.removeItem("phno");
         document.cookie = "access_token=null;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
     };
 
@@ -47,13 +49,14 @@ export default class AuthHandler {
         return res;
     };
 
-    static setAccessToken = (token) => {
+    static setAccessToken = (token,phNo) => {
         if (token != null) {
             let date = new Date();
             date.setTime(date.getTime() + 780000);
             window.localStorage.setItem("accessToken",token)
             axios.post(`${caBaseUrl}/ambassador`,{
-                access_token: token
+                access_token: token,
+                phone_no:phNo
             }).then((response)=>{
                 console.log(response)
             },error=>{

@@ -10,7 +10,11 @@
     flex-direction: column;
     padding: 1.5rem;
 }
-
+.phone__no_input{
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 20px;
+}
 .home{
     display: flex;
     justify-content: space-around;

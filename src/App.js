@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import AOS from 'aos';
 import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import { Navbar, Loader } from "./components";
@@ -7,23 +7,25 @@ import AuthHandler from './auth/authHandler';
 import './App.css';
 
 function App() {
-  
+  const[phoneNo,setPhno]=useState();
   useEffect(() => {
     AOS.init({
       duration: 900,
     });
   }, [])
-
+ 
   useEffect(() => {
+    setPhno(window.localStorage.getItem("phno"));
     let index = window.location.href.indexOf("?");
     const searchString = window.location.href.slice(index);
     const urlParams = new URLSearchParams(searchString);
     const refreshToken = urlParams.get("refreshToken");
     if (refreshToken) localStorage.setItem("refreshToken", refreshToken);
-    AuthHandler.aysncGetAccessToken(refreshToken);
+    AuthHandler.aysncGetAccessToken(refreshToken,phoneNo);
     if (index >= 0) {
       window.open(window.location.href.slice(0, index), "_self");
     }
+    // eslint-disable-next-line
   }, []);
   return (
     <div className="App">
