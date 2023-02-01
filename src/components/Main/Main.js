@@ -41,8 +41,12 @@ function Main() {
 
   const onLoginClick = () => {
     if (!AccountHandler.isUserLoggedIn()) {
-      localStorage.setItem("phno", phoneNo);
-      AccountHandler.logInUser();
+      if (phoneNo.length !== 10) {
+        alert("Please check your phone number value");
+      } else {
+        localStorage.setItem("phno", phoneNo);
+        AccountHandler.logInUser();
+      }
     } else {
       navigate("/leaderboard");
     }
@@ -90,6 +94,7 @@ function Main() {
             type="text"
             placeholder="phone number"
             className="phone__no_input"
+            required
             value={phoneNo}
             onChange={(e) => {
               setPhoneNo(e.target.value);
