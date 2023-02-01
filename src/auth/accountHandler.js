@@ -12,7 +12,6 @@ export default class AccountHandler {
     static logOutUser = () => {
         if (this.isUserLoggedIn()) {
             AuthHandler.clearAllTokens();
-            window.localStorage.removeItem("accessToken");
             window.location.href = `${authBaseURL}/auth/logout?redirect_to=` + window.location;
         }
     };
