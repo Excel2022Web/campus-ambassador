@@ -6,11 +6,16 @@ import { useScreenWidth } from "../../hooks/useScreenWidth";
 import mascot_data from "../../assets/json/mascot.json";
 import "./Main.css";
 import AccountHandler from "../../auth/accountHandler";
+import PhoneNoDialog from "../PhoneNoDialog/PhoneNoDialog";
 function Main() {
   const [mascotSize, setMascotSize] = useState();
-  const [phoneNo, setPhoneNo] = useState("");
+  const[open,setOpen]=useState(false)
   const [accessTokenValue, setAccesTokenValue] = useState();
   const size = useScreenWidth();
+
+  const handleClose=()=>{
+    setOpen(false)
+  }
 
   const navigate = useNavigate();
 
@@ -54,6 +59,7 @@ function Main() {
 
   return (
     <div className="home_sec" id="home">
+      <PhoneNoDialog open={open} handleClose={handleClose}/>
       <div className="home">
         <Lottie
           options={defaultOptions}
@@ -81,7 +87,9 @@ function Main() {
           <button className="reg_btn" onClick={onLoginClick}>
             LEADERBOARD
           </button>
-          <button>Become Ambassador</button>
+          <button onClick={()=>{
+            setOpen(true)
+          }}>Become Ambassador</button>
           {/* <button onClick={onLogoutClick}>Log Out</button> */}
         </div>
       ) : (
