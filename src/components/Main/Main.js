@@ -6,11 +6,16 @@ import { useScreenWidth } from "../../hooks/useScreenWidth";
 import mascot_data from "../../assets/json/mascot.json";
 import "./Main.css";
 import AccountHandler from "../../auth/accountHandler";
+import PhoneNoDialog from "../PhoneNoDialog/PhoneNoDialog";
 function Main() {
   const [mascotSize, setMascotSize] = useState();
-  const [phoneNo, setPhoneNo] = useState("");
+  const[open,setOpen]=useState(false)
   const [accessTokenValue, setAccesTokenValue] = useState();
   const size = useScreenWidth();
+
+  const handleClose=()=>{
+    setOpen(false)
+  }
 
   const navigate = useNavigate();
 
@@ -41,12 +46,7 @@ function Main() {
 
   const onLoginClick = () => {
     if (!AccountHandler.isUserLoggedIn()) {
-      if (phoneNo.length !== 10) {
-        alert("Please check your phone number value");
-      } else {
-        localStorage.setItem("phno", phoneNo);
         AccountHandler.logInUser();
-      }
     } else {
       navigate("/leaderboard");
     }
@@ -59,6 +59,7 @@ function Main() {
 
   return (
     <div className="home_sec" id="home">
+      <PhoneNoDialog open={open} handleClose={handleClose}/>
       <div className="home">
         <Lottie
           options={defaultOptions}
@@ -86,11 +87,14 @@ function Main() {
           <button className="reg_btn" onClick={onLoginClick}>
             LEADERBOARD
           </button>
+          <button onClick={()=>{
+            setOpen(true)
+          }}>Become Ambassador</button>
           {/* <button onClick={onLogoutClick}>Log Out</button> */}
         </div>
       ) : (
         <div>
-          <input
+          {/* <input
             type="text"
             placeholder="Phone"
             className="phone__no_input"
@@ -99,7 +103,7 @@ function Main() {
             onChange={(e) => {
               setPhoneNo(e.target.value);
             }}
-          />
+          /> */}
           <button className="reg_btn" onClick={onLoginClick}>
             REGISTER
           </button>
