@@ -41,12 +41,7 @@ function Main() {
 
   const onLoginClick = () => {
     if (!AccountHandler.isUserLoggedIn()) {
-      if (phoneNo.length !== 10) {
-        alert("Please check your phone number value");
-      } else {
-        localStorage.setItem("phno", phoneNo);
         AccountHandler.logInUser();
-      }
     } else {
       navigate("/leaderboard");
     }
@@ -86,11 +81,12 @@ function Main() {
           <button className="reg_btn" onClick={onLoginClick}>
             LEADERBOARD
           </button>
+          <button>Become Ambassador</button>
           {/* <button onClick={onLogoutClick}>Log Out</button> */}
         </div>
       ) : (
         <div>
-          <input
+          {/* <input
             type="text"
             placeholder="Phone"
             className="phone__no_input"
@@ -99,7 +95,7 @@ function Main() {
             onChange={(e) => {
               setPhoneNo(e.target.value);
             }}
-          />
+          /> */}
           <button className="reg_btn" onClick={onLoginClick}>
             REGISTER
           </button>

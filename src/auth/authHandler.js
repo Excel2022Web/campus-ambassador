@@ -49,19 +49,11 @@ export default class AuthHandler {
         return res;
     };
 
-    static setAccessToken = (token,phNo) => {
+    static setAccessToken = (token) => {
         if (token != null) {
             let date = new Date();
             date.setTime(date.getTime() + 780000);
             window.localStorage.setItem("accessToken",token)
-            axios.post(`${caBaseUrl}/ambassador`,{
-                access_token: token,
-                phone_no:window.localStorage.getItem("phno")
-            }).then((response)=>{
-                console.log(response)
-            },error=>{
-                console.log(error)
-            })
         }
     };
 
