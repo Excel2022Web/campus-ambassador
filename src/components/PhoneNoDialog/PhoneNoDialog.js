@@ -35,9 +35,10 @@ const PhoneNoDialog = ({ open, handleClose }) => {
     <div>
       <Dialog
         fullWidth={true}
+        disableScrollLock={true}
         maxWidth={"md"}
         PaperProps={{
-          sx: { width: "100%", borderRadius: 5, m: 2, minHeight: "60vh" },
+          sx: { width: "100%", borderRadius: 5, m: 2},
         }}
         open={open}
         onClose={handleClose}
@@ -45,19 +46,19 @@ const PhoneNoDialog = ({ open, handleClose }) => {
         aria-describedby="alert-dialog-description"
       >
         <div className="phno__dialog_container">
-        <h1>Register to become Ambassador of Excel in your campus</h1>
-        <form className="phone_dialog_form" onSubmit={finalSubmit}>
-          <input
-            type="text"
-            className="phone__no_input"
-            placeholder="Enter your mobile number"
-            value={phNo}
-            onChange={(e) => {
-              setPhNo(e.target.value);
-            }}
-          />
-          <button type="submit">Submit</button>
-        </form>
+          <h1>Add phone number</h1>
+          <form className="phone_dialog_form" onSubmit={finalSubmit}>
+            <input
+              type="text"
+              className="phone__no_input"
+              placeholder=""
+              value={phNo}
+              onChange={(e) => {
+                setPhNo(e.target.value);
+              }}
+            />
+            <button type="submit" className="submit_btn">Submit</button>
+          </form>
         </div>
       </Dialog>
     </div>

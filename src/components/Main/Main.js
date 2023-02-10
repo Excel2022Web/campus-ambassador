@@ -87,7 +87,7 @@ function Main() {
           <button className="reg_btn" onClick={onLoginClick}>
             LEADERBOARD
           </button>
-          <button onClick={()=>{
+          <button className="amb_btn" onClick={()=>{
             setOpen(true)
           }}>Become Ambassador</button>
           {/* <button onClick={onLogoutClick}>Log Out</button> */}
