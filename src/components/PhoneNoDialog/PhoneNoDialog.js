@@ -7,7 +7,8 @@ const PhoneNoDialog = ({ open, handleClose }) => {
   const [phNo, setPhNo] = useState("");
   const finalSubmit = (e) => {
     e.preventDefault();
-    axios
+    if(phNo.length===10){
+        axios
       .post(`${caBaseUrl}/ambassador`, {
         access_token: window.localStorage.getItem("accessToken"),
         phone_no: phNo,
@@ -24,6 +25,11 @@ const PhoneNoDialog = ({ open, handleClose }) => {
           alert(error.response.data.error);
         }
       );
+    }
+    else{
+        alert('Please check the entered Mobile number value')
+    }
+    
   };
   return (
     <div>
