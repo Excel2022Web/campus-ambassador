@@ -1,6 +1,5 @@
 import axios from "axios";
 import { accountBackendUrl } from "../utils/urls";
-import { caBaseUrl } from "../utils/urls";
 export default class AuthHandler {
     static clearAllTokens = () => {
         window.localStorage.setItem("refreshToken", JSON.stringify(null));

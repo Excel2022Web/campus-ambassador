@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import AOS from 'aos';
 import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import { Navbar, Loader } from "./components";
