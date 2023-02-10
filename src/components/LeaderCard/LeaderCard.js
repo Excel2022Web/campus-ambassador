@@ -7,7 +7,7 @@ import "./LeaderCard.css";
 function Leadercard({ rank, avatar, name, score, skeleton }) {
   
   return (
-    <li className="leaderboard-card">
+    <li className="leaderboard-card"  data-aos="fade-up">
       <h1>{rank}</h1>
         {skeleton ? (
           <Skeleton animation="wave" variant="circle" width={50} height={50}/>

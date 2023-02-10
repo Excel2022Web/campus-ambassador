@@ -37,7 +37,7 @@ const Faqs = [
   {
      id: 5,
      panel: "label5",
-     title: "Under which circumstance will I be removed from the CAA Program?",
+     title: "Under which circumstance will I be removed from the CA Program?",
      desc: "A CA would not be removed until any sort of malpractice is detected. But for a CA to enter the leaderboard and avail prizes, they will have to complete certain tasks and bring about a number of registrations set by us.",
   },
   {
@@ -66,12 +66,12 @@ export default function SimpleAccordion() {
 
   return (
     <div className='faq_section' id='faq'>
-        <div className='faq_title'>
+        <div className='faq_title' data-aos="fade-up">
           <img src={lines} alt=' ' className='head_lines faq_line'/>             
           <h1 className='heading'>FREQUENTLY ASKED <span className='blue'>QUESTIONS</span></h1>
           <img src={line_rt} alt=' ' className='head_lines faq_line'/>            
         </div>
-        <div className='faq'>
+        <div className='faq' data-aos="fade-up">
         {Faqs.map((faq) => (
           <Accordion className='faq_accor' sx={accStyle} expanded={expanded === `${faq.panel}`} onChange={handleChange(`${faq.panel}`)} key={faq.id}>
             <AccordionSummary expandIcon={<ExpandMoreIcon className='expand_icon'/>}>

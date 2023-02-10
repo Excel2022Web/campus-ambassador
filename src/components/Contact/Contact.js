@@ -13,14 +13,14 @@ import './Contact.css'
 function Contact() {
   return (
     <div className='contact' id='contact'>
-      <div className='contact_title'>
+      <div className='contact_title' data-aos="fade-up">
         <img src={lines} alt=' ' className='contact_lines'/>             
         <h1>CONTACT</h1>
         <img src={line_rt} alt=' ' className='contact_lines'/>            
       </div>
       <div className='contact_list'>
         {contactsData.map((contact) => (
-          <div className='contact_info' key={contact.id}>
+          <div className='contact_info' key={contact.id} data-aos="fade-up">
             <h1>{contact.name}</h1>
             <h2>+91 {contact.phone}</h2>
             <div className='contact_soc'>

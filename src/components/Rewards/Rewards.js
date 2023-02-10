@@ -11,12 +11,12 @@ import './Rewards.css'
 function Rewards() {
   return (
     <div className='rewards' id='rewards'>
-      <div className='rewards_head'>
+      <div className='rewards_head' data-aos="fade-up">
         <img src={lines} alt=' 'className='head_lines'/>             
         <h1><span className='blue'>REWARDS</span> AND <span className='blue'>PERKS</span></h1>
         <img src={line_rt} alt=' 'className='head_lines'/>            
       </div>
-      <div className='rewards_mid'>
+      <div className='rewards_mid' >
         <div className='reward_info'>
           <div className='reward_circle'>
             <h2>1</h2>
@@ -46,15 +46,15 @@ function Rewards() {
         </div>
       </div>
       <div className="rewards_foot">
-          <div className='benefits_point'>
+          <div className='benefits_point' data-aos="fade-up">
             <VscDebugBreakpointLog className='benefits_icon'/>
             <p className='benefits_para'>Remaining 7 participants in the top 10 of the leaderboard will get Rs 500 each.</p>
           </div>
-          <div className='benefits_point'>
+          <div className='benefits_point' data-aos="fade-up">
             <VscDebugBreakpointLog className='benefits_icon'/>
             <p className='benefits_para'>Get discount ticket prices and free entry to selected Excel events.</p>
           </div>
-          <div className='benefits_point'>
+          <div className='benefits_point' data-aos="fade-up">
             <VscDebugBreakpointLog className='benefits_icon'/>
             <p className='benefits_para'>Certificate and activity points will be awarded on completing minimum criteria.</p>
           </div>

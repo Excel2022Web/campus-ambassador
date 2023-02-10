@@ -1,2 +1,9 @@
-export { default as HomePage } from './HomePage/HomePage'
-export { default as LeaderBoard } from './LeaderBoard/LeaderBoard'
+import { lazy } from 'react'
+
+const HomePage = lazy(() => import('./HomePage/HomePage'))
+const LeaderBoard = lazy(() => import('./LeaderBoard/LeaderBoard'))
+
+export {
+    HomePage,
+    LeaderBoard
+}

@@ -49,17 +49,17 @@ function About() {
   return (
     <div className='about' id='about'>
         <div className='about_head'>
-            <div className='abt_title'>
+            <div className='abt_title' data-aos="fade-up">
                 <img src={lines} alt='' className='head_lines'/>             
                 <h1>WHAT IS <span className="blue">  EXCEL</span>?</h1>
                 <img src={line_rt} alt='' className='head_lines'/>            
             </div>
-            <p>
+            <p data-aos="fade-up">
                 In 2001, the students of Govt. Model Engineering College founded Excel, the second-largest techno-managerial festival in the country and the first of its kind in South India. Excel has steadily hosted students from more than 2000 universities and 1000 institutions across the nation as it has grown exponentially over the years.     <br /><br />
                 The 22 successful editions of Excel that have preceded it have a rich legacy, and Excel 2022 promises to be even better.        
             </p>
         </div>
-        <div className='gallery_container'>
+        <div className='gallery_container' data-aos="fade-up">
             <IoIosArrowBack onClick={gotoPrev} className='achSlider__prev'/>
             <div className='about_slider'>
                 <Slider {...settings} ref={sliderRef}>

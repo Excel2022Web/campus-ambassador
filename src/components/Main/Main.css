@@ -11,6 +11,7 @@
     padding: 1.5rem;
 }
 
+
 .home{
     display: flex;
     justify-content: space-around;
@@ -72,7 +73,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.8rem;    font-family: var(--primary-font);
+    padding: 0.8rem;    
+    font-family: var(--primary-font);
     width: 220px;
     height: 70px;
     font-size: 1.5rem;
@@ -117,6 +119,20 @@
     -ms-transition:transform 0.2s ease-in-out;
 }
 
+.phone__no_input{
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    width: 220px;
+    padding: 0.5rem 0.8rem;
+    font-family: var(--primary-font);
+    color: #050912;
+    background: #FFFFFF;
+    border: none;
+    outline: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
 
 
 .home_highlights{
@@ -233,6 +249,7 @@
 @media only screen and (max-width: 980px) {
     .home{
         flex-direction: column;
+        padding-top: 0;
     }
     .mascot{
         height: 37vh;
@@ -288,11 +305,11 @@
     }
 
     .reg_btn{
-        width: 150px;
+        /* width: 150px; */
         font-size: 1rem;
     }
     .reg_btn::before {
-        width: 150px;
+        /* width: 150px; */
     }
     .count_circle {
         width: 65px;
