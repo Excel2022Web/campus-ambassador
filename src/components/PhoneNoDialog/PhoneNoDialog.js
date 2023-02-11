@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Dialog } from "@mui/material";
 import './PhoneNoDialog.css'
 import axios from "axios";
 import { caBaseUrl } from "../../utils/urls";
+import Aos from "aos";
 const PhoneNoDialog = ({ open, handleClose }) => {
+  useEffect(()=>{
+    Aos.init({duration:900})
+  },[])
   const [phNo, setPhNo] = useState("");
   const finalSubmit = (e) => {
     e.preventDefault();
@@ -17,12 +21,14 @@ const PhoneNoDialog = ({ open, handleClose }) => {
         (response) => {
           console.log(response);
           if (response.status === 200) {
+            alert('Successfully registered as Excel 2022 campus ambassador..')
             handleClose();
           }
         },
         (error) => {
           console.log(error);
           alert(error.response.data.error);
+          handleClose();
         }
       );
     }
@@ -32,7 +38,7 @@ const PhoneNoDialog = ({ open, handleClose }) => {
     
   };
   return (
-    <div>
+    <div data-aos='zoom-in'>
       <Dialog
         fullWidth={true}
         disableScrollLock={true}

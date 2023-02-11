@@ -10,7 +10,6 @@ import PhoneNoDialog from "../PhoneNoDialog/PhoneNoDialog";
 function Main() {
   const [mascotSize, setMascotSize] = useState();
   const[open,setOpen]=useState(false)
-  const [accessTokenValue, setAccesTokenValue] = useState();
   const size = useScreenWidth();
 
   const handleClose=()=>{
@@ -27,11 +26,6 @@ function Main() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-  useEffect(() => {
-    if (window.localStorage.getItem("accessToken")) {
-      setAccesTokenValue(window.localStorage.getItem("accessToken"));
-    }
-  }, []);
   useEffect(() => {
     if (size > 600) {
       setMascotSize(350);
@@ -82,7 +76,7 @@ function Main() {
           </div>
         </div>
       </div>
-      {accessTokenValue ? (
+      {AccountHandler.isUserLoggedIn() ? (
         <div>
           <button className="reg_btn" onClick={onLoginClick}>
             LEADERBOARD
