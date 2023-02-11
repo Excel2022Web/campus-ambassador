@@ -113,7 +113,7 @@ function Navbar() {
               CONTACT
             </NavLink>
             {AccountHandler.isUserLoggedIn()?<button className="navmob__link nav__logout_btn" onClick={()=>{AccountHandler.logOutUser()}}>
-              LOGOUT
+              Logout
             </button>:null}
             
           </div>

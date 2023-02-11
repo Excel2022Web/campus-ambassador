@@ -15,15 +15,7 @@
     width: 100%;
     padding: 1.5rem 3rem;  
   }
-  .nav__logout_btn{
-    background-color: #001C3D;
-    color: #ffff;
-    display: flex;
-    padding: 0.5rem;
-    border-radius: 10px;
-    border-color: aqua;
-    cursor:pointer;
-  }
+
   .nav_logo img {
     /* height: 100%; */
     width: 130px;
@@ -73,6 +65,16 @@
     cursor: pointer;
   }
   
+  .nav__logout_btn{
+    background-color: #001C3D;
+    color: #ffff;
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border-color: aqua;
+    cursor:pointer;
+    font-size: 0.9rem;
+  }
   
   @media screen and (max-width: 1200px) {
     .nav_contents {
@@ -147,9 +149,21 @@
       opacity: 0.6;
       text-align: center;
     }
+    
   
     .navmob__link:hover {
       opacity: 1;
+    }
+    .nav__logout_btn{
+      background-color: #001C3D;
+      color: #ffff;
+      display: flex;
+      padding: 0.5rem;
+      border-radius: 10px;
+      border-color: aqua;
+      cursor:pointer;
+      font-size: 0.9rem;
+      text-transform: capitalize;
     }
   }
   
