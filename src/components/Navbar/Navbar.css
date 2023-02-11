@@ -15,7 +15,15 @@
     width: 100%;
     padding: 1.5rem 3rem;  
   }
-  
+  .nav__logout_btn{
+    background-color: #001C3D;
+    color: #ffff;
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border-color: aqua;
+    cursor:pointer;
+  }
   .nav_logo img {
     /* height: 100%; */
     width: 130px;

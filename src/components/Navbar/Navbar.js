@@ -3,7 +3,7 @@ import Drawer from "@mui/material/Drawer"
 import { IoMenu, IoClose } from "react-icons/io5"
 import { NavHashLink as NavLink } from "react-router-hash-link"
 import { useScrollPosition } from "../../hooks/useScrollPosition"
-
+import AccountHandler from "../../auth/accountHandler"
 import "./Navbar.css"
 // import logo from '../../assets/png/excel_logo_png.png';
 import excel_logo from "../../assets/excellogowithtext.svg"
@@ -54,6 +54,7 @@ function Navbar() {
           <NavLink to="/#contact" className="nav__link">
             CONTACT
           </NavLink>
+          
         </div>
 
         <div className="nav_hamburger" onClick={handleDrawerOpen}>
@@ -111,6 +112,10 @@ function Navbar() {
             >
               CONTACT
             </NavLink>
+            {AccountHandler.isUserLoggedIn()?<button className="navmob__link nav__logout_btn" onClick={()=>{AccountHandler.logOutUser()}}>
+              LOGOUT
+            </button>:null}
+            
           </div>
         </div>
       </Drawer>
