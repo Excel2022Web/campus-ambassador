@@ -19,14 +19,14 @@ const PhoneNoDialog = ({ open, handleClose }) => {
       })
       .then(
         (response) => {
-          console.log(response);
+          // console.log(response);
           if (response.status === 200) {
             alert('Successfully registered as Excel 2022 campus ambassador..')
             handleClose();
           }
         },
         (error) => {
-          console.log(error);
+          // console.log(error);
           alert(error.response.data.error);
           handleClose();
         }
