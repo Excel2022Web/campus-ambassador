@@ -110,7 +110,10 @@ function Main() {
         </div>
       </div>
 
-      {AccountHandler.isUserLoggedIn() && isAmbassador ? (
+      
+      {AccountHandler.isUserLoggedIn()?
+      <div>
+        {isAmbassador?
         <div>
           <button className="reg_btn" onClick={onLoginClick}>
             LEADERBOARD
@@ -119,13 +122,9 @@ function Main() {
           navigator.clipboard.writeText(referrelId);
           alert('Referel id copied to clipboard');
         }}>Click to copy referrel ID: {referrelId}</button>
-        </div>
-      ) : (
-        null
-      )}
-      {AccountHandler.isUserLoggedIn() && !isAmbassador ? (
-       <div>
-         <button className="reg_btn" onClick={onLoginClick}>
+        </div>:
+        <div>
+          <button className="reg_btn" onClick={onLoginClick}>
             LEADERBOARD
           </button>
           <button
@@ -136,19 +135,18 @@ function Main() {
         >
           Become Ambassador
         </button>
-       </div>
-      ) : (
-        null
-      )}
-      {!isAmbassador && !AccountHandler.isUserLoggedIn()?
+          </div>}
+      </div>
+      :
       (
-        <div>
-          <button className="reg_btn" onClick={onLoginClick}>
+        <button className="reg_btn" onClick={onLoginClick}>
             REGISTER
           </button>
-        </div>
       )
-      :null}
+      }
+
+
+      {/* new code */}
       <div className="features">
         <div className="home_highlights" data-aos="fade-up">
           <div className="count_circle">
