@@ -43,7 +43,7 @@ function Main() {
         .then(
           (response) => {
             // console.log("Navpro:",response)
-            console.log(response.data.ambassador);
+            // console.log(response.data.ambassador);
             if(response.data.ambassador){
               setIsAmbassador(true);
               setReferrelId(response.data.ambassador.userId);
@@ -54,7 +54,7 @@ function Main() {
 
           },
           (error) => {
-            console.log(error);
+            // console.log(error);
           }
         );
     }
