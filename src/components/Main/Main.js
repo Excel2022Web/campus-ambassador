@@ -7,14 +7,17 @@ import mascot_data from "../../assets/json/mascot.json";
 import "./Main.css";
 import AccountHandler from "../../auth/accountHandler";
 import PhoneNoDialog from "../PhoneNoDialog/PhoneNoDialog";
+import { accountBackendUrl } from "../../utils/urls";
+import axios from "axios";
 function Main() {
   const [mascotSize, setMascotSize] = useState();
-  const[open,setOpen]=useState(false)
+  const [open, setOpen] = useState(false);
   const size = useScreenWidth();
-
-  const handleClose=()=>{
-    setOpen(false)
-  }
+  const[isAmbassador,setIsAmbassador]=useState(false)
+  const[referrelId,setReferrelId]=useState()
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const navigate = useNavigate();
 
@@ -26,6 +29,36 @@ function Main() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
+  useEffect(() => {
+    if (AccountHandler.isUserLoggedIn()) {
+      axios
+        .get(`${accountBackendUrl}/profile`, {
+          headers: {
+            Authorization: `Bearer ${window.localStorage.getItem(
+              "accessToken"
+            )}`,
+          },
+        })
+        .then(
+          (response) => {
+            // console.log("Navpro:",response)
+            console.log(response.data.ambassador);
+            if(response.data.ambassador){
+              setIsAmbassador(true);
+              setReferrelId(response.data.ambassador.userId);
+            }
+            else{
+              setIsAmbassador(false);
+            }
+
+          },
+          (error) => {
+            console.log(error);
+          }
+        );
+    }
+  }, []);
   useEffect(() => {
     if (size > 600) {
       setMascotSize(350);
@@ -40,7 +73,7 @@ function Main() {
 
   const onLoginClick = () => {
     if (!AccountHandler.isUserLoggedIn()) {
-        AccountHandler.logInUser();
+      AccountHandler.logInUser();
     } else {
       navigate("/leaderboard");
     }
@@ -53,7 +86,7 @@ function Main() {
 
   return (
     <div className="home_sec" id="home">
-      <PhoneNoDialog open={open} handleClose={handleClose}/>
+      <PhoneNoDialog open={open} handleClose={handleClose} />
       <div className="home">
         <Lottie
           options={defaultOptions}
@@ -76,34 +109,46 @@ function Main() {
           </div>
         </div>
       </div>
-      {AccountHandler.isUserLoggedIn() ? (
+
+      {AccountHandler.isUserLoggedIn() && isAmbassador ? (
         <div>
           <button className="reg_btn" onClick={onLoginClick}>
             LEADERBOARD
           </button>
-          <button className="amb_btn" onClick={()=>{
-            setOpen(true)
-          }}>Become Ambassador</button>
-          {/* <button onClick={onLogoutClick}>Log Out</button> */}
+          <button className="referal_btn" onClick={()=>{
+          navigator.clipboard.writeText(referrelId);
+          alert('Referel id copied to clipboard');
+        }}>Click to copy referrel ID: {referrelId}</button>
         </div>
       ) : (
+        null
+      )}
+      {AccountHandler.isUserLoggedIn() && !isAmbassador ? (
+       <div>
+         <button className="reg_btn" onClick={onLoginClick}>
+            LEADERBOARD
+          </button>
+          <button
+          className="amb_btn"
+          onClick={() => {
+            setOpen(true);
+          }}
+        >
+          Become Ambassador
+        </button>
+       </div>
+      ) : (
+        null
+      )}
+      {!isAmbassador && !AccountHandler.isUserLoggedIn()?
+      (
         <div>
-          {/* <input
-            type="text"
-            placeholder="Phone"
-            className="phone__no_input"
-            required
-            value={phoneNo}
-            onChange={(e) => {
-              setPhoneNo(e.target.value);
-            }}
-          /> */}
           <button className="reg_btn" onClick={onLoginClick}>
             REGISTER
           </button>
         </div>
-      )}
-
+      )
+      :null}
       <div className="features">
         <div className="home_highlights" data-aos="fade-up">
           <div className="count_circle">
