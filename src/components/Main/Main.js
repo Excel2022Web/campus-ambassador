@@ -9,6 +9,7 @@ import AccountHandler from "../../auth/accountHandler";
 import PhoneNoDialog from "../PhoneNoDialog/PhoneNoDialog";
 import { accountBackendUrl } from "../../utils/urls";
 import axios from "axios";
+import IsAuthRender from "../IsAuthRender/IsAuthRender";
 function Main() {
   const [mascotSize, setMascotSize] = useState();
   const [open, setOpen] = useState(false);
@@ -58,7 +59,7 @@ function Main() {
           }
         );
     }
-  }, []);
+  }, [isAmbassador]);
   useEffect(() => {
     if (size > 600) {
       setMascotSize(350);
@@ -113,37 +114,9 @@ function Main() {
       
       {AccountHandler.isUserLoggedIn()?
       <div>
-        {isAmbassador?
-        <div>
-          <button className="reg_btn" onClick={onLoginClick}>
-            LEADERBOARD
-          </button>
-          <button className="referal_btn" onClick={()=>{
-          navigator.clipboard.writeText(referrelId);
-          alert('Referel id copied to clipboard');
-        }}>Click to copy referrel ID: {referrelId}</button>
-        </div>:
-        <div>
-          <button className="reg_btn" onClick={onLoginClick}>
-            LEADERBOARD
-          </button>
-          <button
-          className="amb_btn"
-          onClick={() => {
-            setOpen(true);
-          }}
-        >
-          Become Ambassador
-        </button>
-          </div>}
+        {isAmbassador?<IsAuthRender state={2} referrelId={referrelId} open={open} setOpen={setOpen} onLoginClick={onLoginClick}/>:<IsAuthRender state={1} referrelId={referrelId} open={open} setOpen={setOpen} onLoginClick={onLoginClick}/>}
       </div>
-      :
-      (
-        <button className="reg_btn" onClick={onLoginClick}>
-            REGISTER
-          </button>
-      )
-      }
+      :<IsAuthRender state={3} referrelId={referrelId} open={open} setOpen={setOpen} onLoginClick={onLoginClick}/>}
 
 
       {/* new code */}
