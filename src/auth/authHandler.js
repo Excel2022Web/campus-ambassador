@@ -74,6 +74,7 @@ export default class AuthHandler {
         }
 
         this.setAccessToken(access_token);
+        
         return access_token;
     };
 }

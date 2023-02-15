@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import CountUp from "react-countup";
 import Lottie from "react-lottie";
@@ -7,15 +7,15 @@ import mascot_data from "../../assets/json/mascot.json";
 import "./Main.css";
 import AccountHandler from "../../auth/accountHandler";
 import PhoneNoDialog from "../PhoneNoDialog/PhoneNoDialog";
-import { accountBackendUrl } from "../../utils/urls";
-import axios from "axios";
 import IsAuthRender from "../IsAuthRender/IsAuthRender";
+import { UserContext } from "../../contexts/UserContext";
 function Main() {
   const [mascotSize, setMascotSize] = useState();
   const [open, setOpen] = useState(false);
   const size = useScreenWidth();
-  const[isAmbassador,setIsAmbassador]=useState(false)
-  const[referrelId,setReferrelId]=useState()
+
+  const { referrelId, isAmbassador } = useContext(UserContext);
+
   const handleClose = () => {
     setOpen(false);
   };
@@ -31,34 +31,6 @@ function Main() {
     },
   };
 
-  useEffect(() => {
-    if (AccountHandler.isUserLoggedIn()) {
-      axios
-        .get(`${accountBackendUrl}/profile`, {
-          headers: {
-            Authorization: `Bearer ${window.localStorage.getItem(
-              "accessToken"
-            )}`,
-          },
-        })
-        .then(
-          (response) => {
-            if(response.data.ambassador){
-              setIsAmbassador(true);
-              setReferrelId(response.data.ambassador.userId);
-              // setReferrelId(response.data);
-            }
-            else{
-              setIsAmbassador(false);
-            }
-
-          },
-          (error) => {
-            // console.log(error);
-          }
-        );
-    }
-  }, [isAmbassador,referrelId]);
   useEffect(() => {
     if (size > 600) {
       setMascotSize(350);
@@ -83,6 +55,7 @@ function Main() {
   const onLogoutClick = () => {
     AccountHandler.logOutUser();
   };
+  console.log("isAmbassador", isAmbassador);
 
   return (
     <div className="home_sec" id="home">
@@ -110,13 +83,35 @@ function Main() {
         </div>
       </div>
 
-      
-      {AccountHandler.isUserLoggedIn()?
-      <div>
-        {isAmbassador?<IsAuthRender state={2} referrelId={referrelId} open={open} setOpen={setOpen} onLoginClick={onLoginClick}/>:<IsAuthRender state={1} referrelId={referrelId} open={open} setOpen={setOpen} onLoginClick={onLoginClick}/>}
-      </div>
-      :<IsAuthRender state={3} referrelId={referrelId} open={open} setOpen={setOpen} onLoginClick={onLoginClick}/>}
-
+      {AccountHandler.isUserLoggedIn() ? (
+        <div>
+          {isAmbassador ? (
+            <IsAuthRender
+              state={2}
+              referrelId={referrelId}
+              open={open}
+              setOpen={setOpen}
+              onLoginClick={onLoginClick}
+            />
+          ) : (
+            <IsAuthRender
+              state={1}
+              referrelId={referrelId}
+              open={open}
+              setOpen={setOpen}
+              onLoginClick={onLoginClick}
+            />
+          )}
+        </div>
+      ) : (
+        <IsAuthRender
+          state={3}
+          referrelId={referrelId}
+          open={open}
+          setOpen={setOpen}
+          onLoginClick={onLoginClick}
+        />
+      )}
 
       {/* new code */}
       <div className="features">
