@@ -43,11 +43,10 @@ function Main() {
         })
         .then(
           (response) => {
-            // console.log("Navpro:",response)
-            // console.log(response.data.ambassador);
             if(response.data.ambassador){
               setIsAmbassador(true);
               setReferrelId(response.data.ambassador.userId);
+              // setReferrelId(response.data);
             }
             else{
               setIsAmbassador(false);
@@ -59,7 +58,7 @@ function Main() {
           }
         );
     }
-  }, [isAmbassador]);
+  }, [isAmbassador,referrelId]);
   useEffect(() => {
     if (size > 600) {
       setMascotSize(350);
