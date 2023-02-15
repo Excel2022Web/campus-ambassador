@@ -15,7 +15,6 @@ function UserDetails(props) {
   const [isAmbassador, setIsAmbassador] = React.useState(false);
 
   const getExcelId = async (access_token) => {
-    console.log("access_token", access_token);
     await axios
       .get(`${accountBackendUrl}/Profile`, {
         headers: {
@@ -23,8 +22,6 @@ function UserDetails(props) {
         },
       })
       .then((response) => {
-        console.log(response.data);
-
         setExcelId(response.data.id);
         return response.data.id;
       });
@@ -33,12 +30,9 @@ function UserDetails(props) {
   useEffect(() => {
     axios.get(`${caBaseUrl}/ambassador`).then(
       (response) => {
-        console.log("excelId", excelId);
-        console.log(response.data);
         if (response.data) {
           if (response.data.find((item) => item.excelId === excelId)) {
             setIsAmbassador(true);
-            console.log("id", excelId);
             setReferrelId(excelId);
             // setReferrelId(response.data);
           } else {

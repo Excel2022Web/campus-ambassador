@@ -55,7 +55,6 @@ function Main() {
   const onLogoutClick = () => {
     AccountHandler.logOutUser();
   };
-  console.log("isAmbassador", isAmbassador);
 
   return (
     <div className="home_sec" id="home">
