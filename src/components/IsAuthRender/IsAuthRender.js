@@ -1,6 +1,7 @@
 import React from "react";
 
 const IsAuthRender = ({ state,open, setOpen, onLoginClick,referrelId }) => {
+  console.log("state", state);
   if (state === 1) {
     //logged in + not amba
     return (
