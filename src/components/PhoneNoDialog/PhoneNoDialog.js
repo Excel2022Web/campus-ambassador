@@ -56,7 +56,7 @@ const PhoneNoDialog = ({ open, handleClose }) => {
           <h1>Add phone number</h1>
           <form className="phone_dialog_form" onSubmit={finalSubmit}>
             <input
-              type="text"
+              type="number"
               className="phone__no_input"
               placeholder=""
               value={phNo}
