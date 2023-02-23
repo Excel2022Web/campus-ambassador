@@ -15,20 +15,22 @@
     justify-content: center;
     width: 80%;
     margin: auto;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
 }
 
 .leaderBoard__component h3 {
     color: #1295D2;
     font-family: var(--primary-font);
     font-size: 1.5rem;
-    margin-top: 2rem;
 }
 
 @media screen and (max-width: 800px) {
     .leaderBoard__component {
         width: 100%;
         padding: 2rem;
+    }
+    .leaderBoard__component h3 {
+        font-size: 1.25rem;
     }
 }
 

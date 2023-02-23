@@ -12,7 +12,7 @@ function Leadercard({ rank, avatar, name, score, skeleton }) {
         {skeleton ? (
           <Skeleton animation="wave" variant="circle" width={50} height={50}/>
           ) : (
-            <img src={avatar ? avatar : Avatar} alt="Avatar" />
+            <img src={avatar ? avatar : Avatar} alt="" />
         )}
         {skeleton ? (
           <Skeleton animation="wave" height={65} width="75%" />
